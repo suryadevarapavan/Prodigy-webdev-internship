@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 50vh; 	
+}
+
+.title {
+    font-family:monospace;
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    letter-spacing:20px;
+}
+
+.content {
+    margin-top: 200px;
+    text-align: center;
+    font-size: 2rem;
+font-family:monospace;
+}
+.container {
+margin-top: 200px;
+    text-align: center;
+    font-size: 2rem;
+font-family:monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+color:white;
+}
+.container1{
+display: flex;
+justify-content: center;  
+align-items: center;      
+height: 100vh;           
+}
+button {
+    padding: 15px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: white;
+    color:black;
+}
+
+.carousel-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;  /* Hides images outside the container */
+    position: relative;
+}
+
+/* Carousel styles */
+.carousel {
+    display: flex;  /* Arranges images in a row */
+    transition: transform 1s ease-in-out;  /* Smooth transition between slides */
+}
+
+/* Individual images in the carousel */
+.carousel img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;  /* Prevent images from shrinking */
+    aspect-ratio: 2 / 3;  /* Ensures 2:3 aspect ratio */
+}
+
+/* Optional: styling for navigation buttons (if you want them) */
+.carousel-container::before,
+.carousel-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-container::before {
+    left: 10px;
+}
+
+.carousel-container::after {
+    right: 10px;
+}
